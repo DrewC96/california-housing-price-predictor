@@ -35,6 +35,7 @@ def split_data(df: pd.DataFrame, test_size: float = 0.2, seed: int = 42):
 
 if __name__ == "__main__":
     housing = load_housing_data()
+    housing_copy = load_housing_data()
     housing.info()
     train_set, test_set = split_data(housing)
     print(f"Train: {len(train_set)}, Test: {len(test_set)}")
